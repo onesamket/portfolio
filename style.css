@@ -25,9 +25,11 @@
        scroll-snap-align: start;
    }
    .one{
+
        background-color: aqua;
    }
    .two{
+    height: 150vh;
        background-color: rgb(60, 82, 82);
    }
    .three{
