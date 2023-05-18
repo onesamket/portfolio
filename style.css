@@ -1,173 +1,231 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-}
-:root{
-    --primary-color:#ECEAF2;
-    --secondary-color:#1B1B2A;
-    --shadow:2px 2px 2px 2px #1a1a1a1a,
-             -2px -2px 2px 2px #ffffff;
+    font-family: sans-serif;
 }
 
-.container{
+:root {
+    --primary-color: #ECEAF2;
+    --secondary-color: #1B1B2A;
+    --shadow: 2px 2px 2px 2px #1a1a1a1a,
+        -2px -2px 2px 2px #ffffff;
+}
+
+
+.container {
     scroll-snap-type: y mandatory;
     height: 100vh;
     overflow-y: scroll;
-   }
-   main{
-       transition: 300ms;
-       height: 100vh;
-       display: flex;
-       justify-content: center;   
-       align-items: center;
-       scroll-snap-align: start;
-   }
-   .one{
+}
 
-       background-color: aqua;
-   }
-   .two{
+main {
+    transition: 300ms;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.one {
+
+    background-color: aqua;
+}
+
+.two {
+   margin:1rem 0  ;
     height: 150vh;
-       background-color: rgb(60, 82, 82);
-   }
-   .three{
-       background-color: rgb(0, 55, 255);
-   }
-   .four{
-       background-color: rgb(255, 191, 0);
-   }
-   .five{
-       background-color: rgb(10, 18, 18);
-   }
-   .six{
+    background-color: rgb(241, 244, 244);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+.two .front-end, .back-end, .database{
+    display: flex;
+     justify-content: space-around;
+     padding:1rem;
+}
+.two .front-end{
+    margin: 8rem 0;
+    box-shadow: var(--shadow);
+    width: 100vw;
+    display: flex;
+}
+.two .front-end .language{
+    text-align: center;
+    justify-self: center;
+    width: 200px;
+    height: 230px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.three {
+    background-color: rgb(0, 55, 255);
+}
+
+.four {
+    background-color: rgb(255, 191, 0);
+}
+
+.five {
+    background-color: rgb(10, 18, 18);
+}
+
+.six {
     background-color: rgb(213, 24, 172);
 }
-.seven{
+
+.seven {
     background-color: rgb(211, 51, 15);
-}s
-body{
- background-color: var(--primary-color);
- width: 100vw;
-}
-header{
- height: 80px;
- width: 100%;
- background-color:#fff;
- display: flex;
- position: fixed;
- justify-content: space-between;
- box-shadow: var(--shadow);
 }
 
-header .logo{
+s body {
+    background-color: var(--primary-color);
+    width: 100vw;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+}
+
+header .logo {
     margin: 2rem;
 
 }
-header .logo h2{
+
+header .logo h2 {
     font-size: 35px;
     color: #11033b;
     font-family: sans-serif;
 
 }
-header .manu-bar{
+
+header .manu-bar {
     display: none;
 }
-           
-header .manu-bar .toggle-close{
+
+header .manu-bar .toggle-close {
     display: none;
 }
-header .nav-bars{
+
+header .nav-bars {
     margin-top: 3rem;
     margin-right: 10px;
 }
-header .nav-bars ul{
+
+header .nav-bars ul {
     display: flex;
     text-align: center;
 }
-header .nav-bars ul li{
+
+header .nav-bars ul li {
     margin: 0 10px;
     position: relative;
 
 }
-header .nav-bars ul li::after{
+
+header .nav-bars ul li::after {
     content: "";
-    width:0px;
+    width: 0px;
     height: 2px;
     background-color: rgb(30, 30, 31);
     position: absolute;
-    top:20px;
+    top: 20px;
     left: 0px;
     transition: width 0.4s ease-in;
     transform-origin: left;
 }
-header .nav-bars ul li:hover::after{
+
+header .nav-bars ul li:hover::after {
     width: 25px;
     transform: scaleX(1.6);
 
 }
-header .nav-bars ul li a{
+
+header .nav-bars ul li a {
     color: #11033b;
     font-size: 16px;
     font-family: sans-serif;
     font-weight: 600;
 }
+
 /* for mobile device */
 @media screen and (max-width:477px) {
-     body{ 
+    body {
         background-color: #fff;
-     }
-    header nav{
-     display: flex;
-     flex-direction: column;
-    }
-    header nav .manu-bar{
-        display: flex;
-        position: absolute;
-       right: 1rem;
-       top: 2.5rem;
-       margin-bottom: 2rem;
-      
-    }
-    header nav .manu-bar h2{
-        font-size: 30px;
-    }
-    header nav .nav-bars {
-      animation: nav 0.9s linear;
-      display: none;
-      height:700px;
-      position: absolute;
-      text-align: center;
-      justify-content: center;
-      top: 2rem;
-      left: 0;
-      width:400px;
-      background-color: blue;
-    }
- 
-    @keyframes nav {
-       0%{
-        opacity: 0;
-       } 
-       100%{
-        opacity: 1;
-       }
     }
 
-   header nav .nav-bars ul{
+    header nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav .manu-bar {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 2.5rem;
+        margin-bottom: 2rem;
+
+    }
+
+    header nav .manu-bar h2 {
+        font-size: 30px;
+    }
+
+    header nav .nav-bars {
+        animation: nav 0.9s linear;
+        display: none;
+        height: 700px;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        top: 2rem;
+        left: 0;
+        width: 400px;
+        background-color: #dfdede;
+    }
+
+    @keyframes nav {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+        
+    }
+
+    header nav .nav-bars ul {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-    header nav .nav-bars ul li{
+
+    header nav .nav-bars ul li {
         width: 100%;
         padding: 10px 0px;
-        background-color:;
-        margin:10px 0;
-    }
-    header nav .nav-bars ul li:hover::after{
-        width: 0px;
+        background-color: ;
+        margin: 10px 0;
     }
 
+    header nav .nav-bars ul li:hover::after {
+        width: 0px;
     }
+    .two .back-end , .front-end{
+         display: grid;
+  
+}
+
+}
