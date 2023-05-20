@@ -70,7 +70,7 @@
 
 }
  .container .skill .title {
-    margin: 2rem 0;
+    margin: 1rem 0;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -79,6 +79,7 @@
 
 .container .skill .title h1{
     font-size: 30px;
+    margin-top: 2rem;
     color: #1B1B2A;
 }
 .container .skill .header{
@@ -257,7 +258,28 @@ header .nav-bars ul li a {
         padding: 20px;
         box-shadow: #1a1a1a1a;
     }
+.container .skill .body{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 15px;
+}
+.container .skill .body .language{
+    width: 130px;
+    height: 130px;
+    padding: 10px 10px;
+    
+}
+.container .skill .body img{
+    height:94px;
+    width:94px;
+}
 
+.container .skill .body .language h1{
+   font-size: 16px;
+}
+.container .skill .header{
+    font-size: 20px;
+}
     @keyframes nav {
         0% {
             opacity: 0;
