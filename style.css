@@ -13,129 +13,11 @@
         -2px -2px 2px 2px #ffffff;
 }
 
-
-.container {
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
-}
-
-.container main {
-    transition: 300ms;
-    height: 100vh;
-    /* scroll-snap-align: start; */
-}
-
-.container .description {
-    height: 70vh;
-    margin-top:6rem ;
-    background-color:linear-gradent();
-    display: flex;
-    text-align: center;
-    /* box-shadow: 6px 6px 6px 6px #1a1a1a1a,
-            -6px -6px 6px 6px #ffffff;
-     */
-}
-.container .description .left img{
-    margin: 2rem;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow: var(--shadow);
-
-}
-.container .description .right{
-    width: calc(100%-300px);
-    /* background-color: aqua; */
-    padding: 10px;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    font-family: sans-serif;
-
-}
-
-.container .description .right .link{
-    float: left;
-}
-
-
-
-
-.container .skill {
-    background-color: rgb(243, 244, 246);
-    height: auto;
-    display: block;
-
-}
- .container .skill .title {
-    margin: 1rem 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-}
-
-.container .skill .title h1{
-    font-size: 30px;
-    margin-top: 2rem;
-    color: #1B1B2A;
-}
-.container .skill .header{
-    margin: 2rem 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 28px;
-
-
-}
-
-.container .skill .body{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 1.5rem;
-}
-.container .skill .body .language{
-    width: 195px;
-    height: 195px;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: var(--shadow);
-}
-.container .skill .body .language h1{
-    font-size: 25px;
-
-}
-.container .skill .body img{
-    width: 150px;
-    height: 150px;
-
-}
-.four {
-    background-color: rgb(255, 191, 0);
-}
-
-.five {
-    background-color: rgb(10, 18, 18);
-}
-
-.six {
-    background-color: rgb(213, 24, 172);
-}
-
-.seven {
-    background-color: rgb(211, 51, 15);
-}
-
-s body {
+body {
     background-color: var(--primary-color);
     width: 100vw;
 }
-
+/* styling Header tag  */
 header {
     height: 80px;
     width: 100%;
@@ -207,8 +89,8 @@ header .nav-bars ul li a {
     font-weight: 600;
 }
 
-/* for mobile device */
 @media screen and (max-width:477px) {
+    
     body {
         background-color: #fff;
     }
@@ -232,8 +114,8 @@ header .nav-bars ul li a {
     }
 
     header nav .nav-bars {
-        animation: nav 0.9s linear;
         display: none;
+        animation: nav 0.9s linear;
         height: 700px;
         position: absolute;
         text-align: center;
@@ -243,6 +125,157 @@ header .nav-bars ul li a {
         width: 400px;
         background-color: #dfdede;
     }
+    @keyframes nav {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+        
+    }
+
+    header nav .nav-bars ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav .nav-bars ul li {
+        width: 100%;
+        padding: 10px 0px;
+        /* background-color: ; */
+        margin: 10px 0;
+    }
+
+    header nav .nav-bars ul li:hover::after {
+        width: 0px;
+    }
+
+}
+
+
+
+/* styelig container class */
+
+.container {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.container main {
+    transition: 300ms;
+    height: 100vh;
+    /* scroll-snap-align: start; */
+}
+
+.container .description {
+    height: 70vh;
+    margin-top:6rem ;
+    background-color:linear-gradent();
+    display: flex;
+    text-align: center;
+    /* box-shadow: 6px 6px 6px 6px #1a1a1a1a,
+            -6px -6px 6px 6px #ffffff;
+     */
+}
+.container .description .left img{
+    margin: 2rem;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+
+}
+.container .description .right{
+    width: calc(100%-300px);
+    /* background-color: aqua; */
+    padding: 10px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    font-family: sans-serif;
+
+}
+
+.container .description .right .link{
+    float: left;
+}
+
+.container .skill {
+    background-color: rgb(243, 244, 246);
+    height: auto;
+    display: block;
+
+}
+ .container .skill .title {
+    margin: 1rem 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.container .skill .title h1{
+    font-size: 30px;
+    margin-top: 2rem;
+    color: #1B1B2A;
+}
+.container .skill .header{
+    margin: 2rem 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 28px;
+
+
+}
+.container .skill .body{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1.5rem;
+}
+.container .skill .body .language{
+    width: 195px;
+    height: 195px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+.container .skill .body .language h1{
+    font-size: 25px;
+
+}
+.container .skill .body img{
+    width: 150px;
+    height: 150px;
+
+}
+.four {
+    background-color: rgb(255, 191, 0);
+}
+
+.five {
+    background-color: rgb(10, 18, 18);
+}
+
+.six {
+    background-color: rgb(213, 24, 172);
+}
+
+.seven {
+    background-color: rgb(211, 51, 15);
+}
+
+ 
+/* for mobile device */
+@media screen and (max-width:477px) {
+ 
     .container .description{
         flex-direction: column;
         height: auto;
@@ -280,37 +313,6 @@ header .nav-bars ul li a {
 .container .skill .header{
     font-size: 20px;
 }
-    @keyframes nav {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-
-        
-    }
-
-    header nav .nav-bars ul {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    header nav .nav-bars ul li {
-        width: 100%;
-        padding: 10px 0px;
-        background-color: ;
-        margin: 10px 0;
-    }
-
-    header nav .nav-bars ul li:hover::after {
-        width: 0px;
-    }
-    .two .back-end , .front-end{
-         display: grid;
-  
-}
+   
 
 }
