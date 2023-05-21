@@ -97,7 +97,7 @@ header .nav-bars ul li a {
     }
 
     header{
-        height: 50px;
+        height: 80px;
     }
     header nav {
         display: flex;
@@ -216,10 +216,14 @@ header .nav-bars ul li a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-top: 5rem;
+    margin-left: 9rem;
     font-family: sans-serif;
 
 }
-
+.container .description .right p{
+    width: 600px;
+}
 .container .description .right .link {
     float: left;
 }
@@ -316,8 +320,16 @@ header .nav-bars ul li a {
     }
 
     .container .description .right {
-        padding: 20px;
+        padding: 5px;
+        width: 90vw;
         box-shadow: #1a1a1a1a;
+        margin: 1rem 0 0rem 0;
+    }
+    .container .description .right p{
+        width: 98%;
+        height: fit-content;
+        text-indent: 0;
+    
     }
 
     .container .skill .body {
