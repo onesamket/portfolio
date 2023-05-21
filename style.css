@@ -96,6 +96,9 @@ header .nav-bars ul li a {
         background-color: #fff;
     }
 
+    header{
+        height: 50px;
+    }
     header nav {
         display: flex;
         flex-direction: column;
