@@ -17,6 +17,7 @@ body {
     background-color: var(--primary-color);
     width: 100vw;
 }
+
 /* styling Header tag  */
 header {
     height: 80px;
@@ -90,7 +91,7 @@ header .nav-bars ul li a {
 }
 
 @media screen and (max-width:477px) {
-    
+
     body {
         background-color: #fff;
     }
@@ -125,31 +126,43 @@ header .nav-bars ul li a {
         width: 400px;
         background-color: #dfdede;
     }
+
     @keyframes nav {
         0% {
             opacity: 0;
+            width: 0px;
         }
 
         100% {
             opacity: 1;
+            width: 400px;
+
         }
 
-        
+
     }
 
     header nav .nav-bars ul {
         width: 100%;
         display: flex;
         flex-direction: column;
+        text-align: center;
+        /* justify-content: center; */
     }
 
     header nav .nav-bars ul li {
         width: 100%;
         padding: 10px 0px;
-        /* background-color: ; */
-        margin: 10px 0;
+       position: relative;
+       left: -25%;
+       height: 30px;
+       padding: 10px 0;
+        margin: 0px 50px;
     }
-
+    header nav .nav-bars ul li:hover {
+        background-color: #eee9ee;
+ 
+    }
     header nav .nav-bars ul li:hover::after {
         width: 0px;
     }
@@ -174,15 +187,16 @@ header .nav-bars ul li a {
 
 .container .description {
     height: 70vh;
-    margin-top:6rem ;
-    background-color:linear-gradent();
+    margin-top: 6rem;
+    background-color: linear-gradent();
     display: flex;
     text-align: center;
     /* box-shadow: 6px 6px 6px 6px #1a1a1a1a,
             -6px -6px 6px 6px #ffffff;
      */
 }
-.container .description .left img{
+
+.container .description .left img {
     margin: 2rem;
     width: 300px;
     height: 300px;
@@ -190,7 +204,8 @@ header .nav-bars ul li a {
     box-shadow: var(--shadow);
 
 }
-.container .description .right{
+
+.container .description .right {
     width: calc(100%-300px);
     /* background-color: aqua; */
     padding: 10px;
@@ -202,7 +217,7 @@ header .nav-bars ul li a {
 
 }
 
-.container .description .right .link{
+.container .description .right .link {
     float: left;
 }
 
@@ -212,19 +227,22 @@ header .nav-bars ul li a {
     display: block;
 
 }
- .container .skill .title {
+
+.container .skill .title {
     margin: 1rem 0;
     display: flex;
     text-align: center;
     justify-content: center;
 
 }
-.container .skill .title h1{
+
+.container .skill .title h1 {
     font-size: 30px;
     margin-top: 2rem;
     color: #1B1B2A;
 }
-.container .skill .header{
+
+.container .skill .header {
     margin: 2rem 0;
     display: flex;
     text-align: center;
@@ -234,28 +252,33 @@ header .nav-bars ul li a {
 
 
 }
-.container .skill .body{
+
+.container .skill .body {
     display: flex;
     justify-content: space-around;
     text-align: center;
     padding: 1.5rem;
 }
-.container .skill .body .language{
+
+.container .skill .body .language {
     width: 195px;
     height: 195px;
     padding: 10px;
     border-radius: 4px;
     box-shadow: var(--shadow);
 }
-.container .skill .body .language h1{
+
+.container .skill .body .language h1 {
     font-size: 25px;
 
 }
-.container .skill .body img{
+
+.container .skill .body img {
     width: 150px;
     height: 150px;
 
 }
+
 .four {
     background-color: rgb(255, 191, 0);
 }
@@ -272,47 +295,53 @@ header .nav-bars ul li a {
     background-color: rgb(211, 51, 15);
 }
 
- 
+
 /* for mobile device */
 @media screen and (max-width:477px) {
- 
-    .container .description{
+
+    .container .description {
         flex-direction: column;
         height: auto;
         margin: 3rem 1rem;
     }
-    .container .description .left img{
-        margin: 6rem 0 1rem 0;
-        height: 250px;
-        width: 250px;
 
+    .container .description .left img {
+        margin: 6rem 0 1rem 0;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
     }
-    .container .description .right{
+
+    .container .description .right {
         padding: 20px;
         box-shadow: #1a1a1a1a;
     }
-.container .skill .body{
-    display: grid;
-    grid-template-columns:1fr 1fr;
-    gap: 15px;
-}
-.container .skill .body .language{
-    width: 130px;
-    height: 130px;
-    padding: 10px 10px;
-    
-}
-.container .skill .body img{
-    height:94px;
-    width:94px;
-}
 
-.container .skill .body .language h1{
-   font-size: 16px;
-}
-.container .skill .header{
-    font-size: 20px;
-}
-   
+    .container .skill .body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .container .skill .body .language {
+        width: 100px;
+        height: 100px;
+        padding: 10px 10px;
+
+    }
+
+    .container .skill .body img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .container .skill .body .language h1 {
+        font-size: 13px;
+    }
+
+    .container .skill .header {
+        font-size: 20px;
+    }
+
 
 }
