@@ -422,16 +422,13 @@ justify-content: space-around;
 }
 @media screen and (max-width:477px) {
  .footers{
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
+
    display: grid;
    grid-template-columns: 1fr;
    gap: 20px;
  }
  .footers .row{
     top: 20%;
-    scroll-snap-align: start;
 
  }
 
