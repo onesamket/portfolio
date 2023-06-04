@@ -371,7 +371,7 @@ header .nav-bars ul li a {
 /* footer section  */
 
 .footers{
-background-color: #fff;
+background-color: rgba(255,255,255,0.4);
 display: flex;
 justify-content: space-around;
 /* box-shadow: var(--shadow); */
@@ -422,16 +422,15 @@ justify-content: space-around;
 }
 @media screen and (max-width:477px) {
  .footers{
-
-   display: grid;
-   grid-template-columns: 1fr;
-   gap: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
  }
- .footers .row{
-    top: 20%;
-
- }
-
+.footers .row{
+    height: fit-content;
+    padding: 30px;
+    margin-right: 20px;
+}
 }
 
 
