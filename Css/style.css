@@ -28,7 +28,10 @@ header {
     justify-content: space-between;
     box-shadow: var(--shadow);
 }
-
+.Header{
+    box-shadow: red;
+    background-color: blue;
+}
 header .logo {
     margin: 2rem;
 
@@ -51,7 +54,7 @@ header .manu-bar .toggle-close {
 
 header .nav-bars {
     margin-top: 3rem;
-    margin-right: 10px;
+    margin-right: 40px;
 }
 
 header .nav-bars ul {
@@ -60,7 +63,7 @@ header .nav-bars ul {
 }
 
 header .nav-bars ul li {
-    margin: 0 10px;
+    margin: 0 2rem;
     position: relative;
 
 }
@@ -183,8 +186,9 @@ header .nav-bars ul li a {
 }
 
 .container main {
+    margin-top: 12rem;
     transition: 300ms;
-    height: 100vh;
+    height: 80vh;
     /* scroll-snap-align: start; */
 }
 
@@ -358,5 +362,89 @@ header .nav-bars ul li a {
         font-size: 20px;
     }
 
+
+}
+
+
+
+
+/* footer section  */
+
+.footers{
+background-color: #fff;
+display: flex;
+justify-content: space-around;
+/* box-shadow: var(--shadow); */
+}
+.footers .row{
+    width: 300px;
+    height: 400px;
+    padding: 3rem 2rem;
+    /* background-color: #b8b8bd; */
+    border-radius: 10px;
+    align-items: center;
+    justify-content: baseline;
+    text-align: center;
+}
+
+.footers .row .contact p{
+    padding: 10px 0;
+}
+.footers .row .title h4{
+    font-size: 25px;
+    color: #111;
+    font-weight: 700;
+}
+.footers .row ul {
+    text-align: center;
+}
+.footers .row ul li{
+    margin: 1rem 0 0 6rem;
+    
+   }
+   
+.footers .row .social-links li{
+    text-align: center;
+    margin: 1rem 0 0 6rem;
+}
+.footers .row ul li a{
+    display: flex;
+    transition: 500ms;
+    gap: 10px;
+}
+.footers .row ul li a,
+ p{
+    color: #111;
+    font-size: 18px;
+}
+.footers .row ul li a:hover{
+    color: blue;
+}
+@media screen and (max-width:477px) {
+ .footers{
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 20px;
+ }
+ .footers .row{
+    top: 20%;
+    scroll-snap-align: start;
+
+ }
+
+}
+
+
+/* copy right section  */
+.copy-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+    background-color: inherit;
 
 }
