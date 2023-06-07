@@ -14,7 +14,7 @@
 }
 
 body {
-    /* background-color: var(--primary-color); */
+   
     background-size: cover;
     width: 100vw;
 }
@@ -23,17 +23,15 @@ body {
 header {
     height: 80px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8) transparent;
+    background-color:black;
     display: flex;
     position: fixed;
     justify-content: space-between;
     box-shadow: var(--shadow);
+    z-index: 4;
 }
 
-.Header {
-    box-shadow: red;
-    background-color: blue;
-}
+
 
 header .logo {
     margin: 2rem;
@@ -104,12 +102,13 @@ header .nav-bars ul li a {
 
     body {
         background-color: inherit;
-        /* background-image: url('../images/Background/logo.png'); */
+      
     }
 
     header {
         height: 80px;
-        background-color: #1B1B2A;
+        
+        background-color: #fff;
     }
 
     header nav {
@@ -146,7 +145,7 @@ header .nav-bars ul li a {
     header .nav-bars ul li:last-child {
         display: flex;
         position: relative;
-        left: 15%;
+        left: 8%;
         transform: translateY(11rem);
         animation: onesamket 2s linear;
         /* transform: translate(50%,50%); */
@@ -215,54 +214,70 @@ header .nav-bars ul li a {
     scroll-snap-type: y mandatory;
     height: 100vh;
     overflow-y: scroll;
+    margin: 0;
 }
 
 .container main {
-    margin-top: 12rem;
+    margin-top: 2rem;
     transition: 300ms;
     height: 80vh;
     /* scroll-snap-align: start; */
 }
 
 .container .description {
-    height: 70vh;
+    height: 90vh;
     margin-top: 6rem;
     display: flex;
     text-align: center;
-    background-image: url('../images/Background/mac.png');
-    background-size: cover;
+    /* background-image: url('../images/Background/mac.png'); */
+   
 
 }
-
+.container .description h1 ,
+h3{
+    font-size: 22px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .container .description .left img {
-    margin: 2rem;
-    width: 300px;
-    height: 300px;
+    margin: 4rem 1rem 1rem 1rem;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     box-shadow: var(--shadow);
 
 }
 
 .container .description .right {
-    width: calc(100%-300px);
-    /* background-color: aqua; */
-    padding: 10px;
+    width: calc(100%-100px);
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    padding: 2rem 10px;
     height: fit-content;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    border-radius: 40px 0px 40px 0px ;
     margin-top: 5rem;
-    margin-left: 9rem;
+    margin-right: 2rem;
     font-family: sans-serif;
 
 }
 
 .container .description .right p {
-    width: 600px;
+    text-align: justify;
+    color: #ECEAF2;
+    padding: 2rem;
+    font-weight: 500;
+    font-size: 18px;
 }
 
-.container .description .right .link {
-    float: left;
+.container .description .right button {
+    background-color: black;
+    ;
+
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
 }
 
 .container .skill {
@@ -311,7 +326,7 @@ header .nav-bars ul li a {
     text-align: center;
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
-                -2px -2px 2px #fff;
+        -2px -2px 2px #fff;
 }
 
 .container .skill .body .language h1 {
@@ -324,14 +339,18 @@ header .nav-bars ul li a {
     height: 250px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
+    position: relative;
     transform: translateY(-40px);
+    z-index: 2;
+    
 
 }
-.container .skill .body .language p{
+
+.container .skill .body .language p {
     color: #111;
     width: 280px;
-   text-align: left;
-   margin-left: 20px;
+    text-align: left;
+    margin-left: 20px;
 }
 
 
@@ -342,27 +361,30 @@ header .nav-bars ul li a {
     .container .description {
         flex-direction: column;
         height: auto;
-        margin: 3rem 1rem;
+        margin: 3rem 0rem;
     }
 
     .container .description .left img {
         margin: 6rem 0 1rem 0;
-        height: 200px;
-        width: 200px;
+        height: 240px;
+        width: 240px;
         border-radius: 10px;
     }
 
     .container .description .right {
-        padding: 5px;
-        width: 90vw;
+        padding: 1rem;
+        width: 85vw;
         box-shadow: #1a1a1a1a;
-        margin: 1rem 0 0rem 0;
+        margin: 1rem 0.2rem;
+
     }
 
     .container .description .right p {
         width: 98%;
+        padding: 1rem 0.3rem;
         height: fit-content;
-        text-indent: 0;
+        text-align: start;
+        word-wrap: break-word;
 
     }
 
@@ -370,42 +392,47 @@ header .nav-bars ul li a {
         display: grid;
         grid-template-columns: 1fr;
         gap: 5rem;
-        box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     }
 
-     .container .skill .body .language {
+    .container .skill .body .language {
         width: 260px;
         height: fit-content;
         padding: 10px 10px 20px 10px;
 
     }
+
     .container .skill .body img {
-       overflow: hidden;
-       z-index: inherit;
-    } 
+        overflow: hidden;
+        z-index: inherit;
+    }
 }
-.container .skill .body .language p{
+
+.container .skill .body .language p {
     width: 250px;
     margin-left: 10px;
 }
 
 /* projects section  */
-.projects{
+.projects {
     border-top: 1px rgba(0, 0, 0, 0.2) solid;
 
 
-padding: 2rem 0;
+    padding: 2rem 0;
 }
+
 .projects .title {
     text-align: center;
     justify-content: center;
     padding: 20px 0;
 }
-.projects section{
+
+.projects section {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
 }
+
 .projects section article {
     width: 380px;
     text-align: center;
@@ -415,35 +442,41 @@ padding: 2rem 0;
     background-color: #f1f1f3;
     box-shadow: var(--shadow);
 }
-.projects section img{
+
+.projects section img {
     width: 85%;
     height: 230px;
     margin: 10px;
 }
-.projects section article p{
+
+.projects section article p {
     color: #111;
     text-align: justify;
     padding: 10px;
 }
-.projects section article a{
+
+.projects section article a {
     margin: 10px 0;
     padding: 20px;
 }
 
 @media screen and (max-width:500px) {
-.projects section{
-    flex-direction: column;
-}
-.projects section article{
-    width:240px ;
-    margin: 10px 10px;
-    height: fit-content;
-}
-.projects section article p{
-    text-align: start;
-}
+    .projects section {
+        flex-direction: column;
+    }
+
+    .projects section article {
+        width: 240px;
+        margin: 10px 10px;
+        height: fit-content;
+    }
+
+    .projects section article p {
+        text-align: start;
+    }
 
 }
+
 /* fotter section  */
 
 .footers {
