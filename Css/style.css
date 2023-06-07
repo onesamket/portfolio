@@ -103,7 +103,7 @@ header .nav-bars ul li a {
 @media screen and (max-width:477px) {
 
     body {
-        background-color: #1B1B2A;
+        background-color: inherit;
         /* background-image: url('../images/Background/logo.png'); */
     }
 
@@ -387,6 +387,62 @@ header .nav-bars ul li a {
 .container .skill .body .language p{
     width: 250px;
     margin-left: 10px;
+}
+
+/* projects section  */
+.projects{
+    border-top: 1px rgba(0, 0, 0, 0.2) solid;
+
+
+padding: 2rem 0;
+}
+.projects .title {
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.projects section{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.projects section article {
+    width: 380px;
+    text-align: center;
+    height: 420px;
+    margin: 20px;
+    padding: 2rem;
+    background-color: #f1f1f3;
+    box-shadow: var(--shadow);
+}
+.projects section img{
+    width: 85%;
+    height: 230px;
+    margin: 10px;
+}
+.projects section article p{
+    color: #111;
+    text-align: justify;
+    padding: 10px;
+}
+.projects section article a{
+    margin: 10px 0;
+    padding: 20px;
+}
+
+@media screen and (max-width:500px) {
+.projects section{
+    flex-direction: column;
+}
+.projects section article{
+    width:240px ;
+    margin: 10px 10px;
+    height: fit-content;
+}
+.projects section article p{
+    text-align: start;
+}
+
 }
 /* fotter section  */
 
